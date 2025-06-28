@@ -1,0 +1,17 @@
+[package]
+name = "net-firewall-ebpf"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+net-firewall-common = { path = "../net-firewall-common" }
+
+aya-ebpf = { workspace = true }
+aya-log-ebpf = { workspace = true }
+network-types = "0.0.8"
+[build-dependencies]
+which = { workspace = true }
+
+[[bin]]
+name = "net-firewall"
+path = "src/main.rs"
